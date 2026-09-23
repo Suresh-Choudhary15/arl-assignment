@@ -86,6 +86,11 @@ curl -X POST localhost:3000/batches/<batch-id>/harvest -H "Content-Type: applica
 | POST   | `/batches/:id/harvest`        | 201, or 400 / 404 / 409 (wrong stage)              |
 | GET    | `/reports/yield`              | Part 3c (bonus) — see below                        |
 
+`.env` is loaded automatically via `dotenv/config` (imported at the top of
+`src/db/pool.ts`, which every entrypoint — the server, the migration
+runner, and the seed script — goes through). You don't need to `export`
+the variables yourself.
+
 ---
 
 ## Where each business rule is enforced
