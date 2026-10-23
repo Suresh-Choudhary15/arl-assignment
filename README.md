@@ -272,8 +272,6 @@ against a real local Postgres instance) passes, and I manually exercised
 every endpoint with `curl` including the 409 paths, the freed-tray
 re-seed, and the yield report — but the first draft of nearly every file
 came from Claude rather than being typed by hand first. Where I made a
-deliberate design call over an alternative Claude suggested (e.g., pushing
+deliberate design call over an alternative Claude suggested and tested (e.g., pushing
 rule 1 to a database constraint rather than an application-level lock,
-or picking page/pageSize over cursor pagination), that reasoning is
-written into this README rather than left implicit, since that's the
-part I'd need to defend on the call.
+or picking page/pageSize over cursor pagination).
